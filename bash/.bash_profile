@@ -1,7 +1,7 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # source ~/.profile
-export PATH="/usr/local/bin:/Applications/MAMP/bin/php/php7.0.20/bin:$PATH"
+# export PATH="/usr/local/Cellar/node/12.12.0/lib/node_modules/@angular/cli/bin:$PATH"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -15,6 +15,7 @@ COLOR_GREEN="\033[0;32m"
 COLOR_OCHRE="\033[38;5;95m"
 COLOR_BLUE="\033[0;34m"
 COLOR_WHITE="\033[0;37m"
+COLOR_BLACK="\[\033[0;30m\]"
 COLOR_RESET="\033[0m"
 
 function git_color {
@@ -52,7 +53,9 @@ function git_branch_on {
     fi
 }
 
-export PS1="\[\033[38;5;75m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] at \[$(tput sgr0)\]\[\033[38;5;245m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] in \[$(tput sgr0)\]\[\033[38;5;199m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\[\033[38;5;11m\]\[\033[38;5;15m\] \[$COLOR_WHITE\]\$(git_branch_on)\\[\$(git_color)\]\$(git_branch)\[$COLOR_WHITE\]\$\[$COLOR_RESET\] "
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+
+export PS1="\[\033[38;5;75m\]\u\[$(tput sgr0)\]\[$COLOR_RESET\] at \[$(tput sgr0)\]\[\033[38;5;245m\]\h\[$(tput sgr0)\]\[$COLOR_RESET\] in \[$(tput sgr0)\]\[\033[38;5;199m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\[\033[38;5;11m\]\[\033[38;5;15m\] \[$COLOR_RESET\]\$(git_branch_on)\\[\$(git_color)\]\$(git_branch)\[$COLOR_RESET\]\$\[$COLOR_RESET\] "
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -80,21 +83,6 @@ listening() {
     fi
 }
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # React Native Android
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -104,3 +92,14 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 alias make=gmake
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ivan/google-cloud-sdk/path.bash.inc' ]; then . '/Users/ivan/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ivan/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/ivan/google-cloud-sdk/completion.bash.inc'; fi
+
+
+# Chrome without web security https://alfilatov.com/posts/run-chrome-without-cors/?fbclid=IwAR0c-sEwx8eL63Yn1rBGV3ddGHneCMg-HWM-vjU2hCouV3qazIVHhKBWCFk
+alias chrome-without-security='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
+export GPG_TTY=$(tty)
