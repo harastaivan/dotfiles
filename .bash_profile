@@ -1,1 +1,1 @@
-source ./dotfiles/bash/.bash_profile
+source /Users/ivan/dotfiles/bash/.bash_profile
