@@ -1,1 +1,1 @@
-cp .bash_profile .bashrc .gitconfig ~
+cp .bash_profile .bashrc .gitconfig .zshrc ~

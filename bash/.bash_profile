@@ -1,4 +1,4 @@
-export BASH_SILENCE_DEPRECATION_WARNING=1
+export BASH_SILENCE_DEPRECATION_WARNING=0
 
 # source ~/.profile
 # export PATH="/usr/local/Cellar/node/12.12.0/lib/node_modules/@angular/cli/bin:$PATH"
