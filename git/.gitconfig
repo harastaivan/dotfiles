@@ -1,0 +1,26 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Ivan Harasta
+	email = harasta.ivan@gmail.com
+	signingkey = C32C8FDD1788E8B0
+[core]
+	excludesfile = /Users/ivan/dotfiles/git/.gitignore
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+	gpgsign = true
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[alias]
+    ci = commit
+    st = status
+    br = branch -v --sort=-committerdate
+    clockify = log --pretty='%C(auto) %h %Cred%ad %Cblue%an%C(auto)%d %s'
+[log]
+    date = format:%a %d. %m. %Y %H:%M:%S
+    # date = relative
+# [format]
+   # pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
