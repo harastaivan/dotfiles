@@ -9,3 +9,8 @@ Up to date dotfiles, and configurations are in subfolders. They are referenced b
 ```sh
 ./copy.sh
 ```
+
+## SSH and GPG
+
+- copy `~/.ssh` folder
+- generate GPG keys
