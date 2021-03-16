@@ -3,12 +3,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=0
 # source ~/.profile
 # export PATH="/usr/local/Cellar/node/12.12.0/lib/node_modules/@angular/cli/bin:$PATH"
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-export -f parse_git_branch
-
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"
 COLOR_GREEN="\033[0;32m"
@@ -53,7 +47,7 @@ function git_branch_on {
     fi
 }
 
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh
 
 export PS1="\[\033[38;5;75m\]\u\[$(tput sgr0)\]\[$COLOR_RESET\] at \[$(tput sgr0)\]\[\033[38;5;245m\]\h\[$(tput sgr0)\]\[$COLOR_RESET\] in \[$(tput sgr0)\]\[\033[38;5;199m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\[\033[38;5;11m\]\[\033[38;5;15m\] \[$COLOR_RESET\]\$(git_branch_on)\\[\$(git_color)\]\$(git_branch)\[$COLOR_RESET\]\$\[$COLOR_RESET\] "
 
