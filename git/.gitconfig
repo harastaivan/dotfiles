@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
 	name = Ivan Harasta
 	email = harasta.ivan@gmail.com
-	signingkey = C32C8FDD1788E8B0
+	signingkey = E8025D8DC29EF8A0
 [core]
 	excludesfile = /Users/ivan/dotfiles/git/.gitignore
 [gpg]

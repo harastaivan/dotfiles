@@ -2,11 +2,13 @@
 command -v brew &> /dev/null && echo "brew already installed"
 command -v brew &> /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ivan/.zprofile
+
 # Install cli apps
 brew install composer deno gnupg go speedtest-cli node yarn
 
 # Install cask (desktop) apps
-brew cask install adobe-creative-cloud battle-net brooklyn discord docker google-chrome insomnia jetbrains-toolbox messenger microsoft-teams slack spotify visual-studio-code vlc 
+brew install --cask adobe-creative-cloud battle-net brooklyn discord docker google-chrome insomnia jetbrains-toolbox messenger microsoft-teams slack spotify visual-studio-code vlc
 
 # Optionals -- uncomment
 # brew install composer omnidisksweeper visual-studio
