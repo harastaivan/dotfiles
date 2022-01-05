@@ -88,10 +88,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias make=gmake
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ivan/google-cloud-sdk/path.bash.inc' ]; then . '/Users/ivan/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/$USER/google-cloud-sdk/path.bash.inc' ]; then . '/Users/$USER/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/ivan/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/ivan/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/$USER/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/$USER/google-cloud-sdk/completion.bash.inc'; fi
 
 
 # Chrome without web security https://alfilatov.com/posts/run-chrome-without-cors/?fbclid=IwAR0c-sEwx8eL63Yn1rBGV3ddGHneCMg-HWM-vjU2hCouV3qazIVHhKBWCFk

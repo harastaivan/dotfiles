@@ -1,1 +1,1 @@
-source /Users/ivan/dotfiles/zsh/.zshrc
+source /Users/$USER/dotfiles/zsh/.zshrc

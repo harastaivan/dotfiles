@@ -1,13 +1,12 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Ivan Harasta
 	email = harasta.ivan@gmail.com
 	signingkey = E8025D8DC29EF8A0
 [core]
-	excludesfile = /Users/ivan/dotfiles/git/.gitignore
+	excludesfile = /Users/$USER/dotfiles/git/.gitignore
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [commit]
 	gpgsign = true
 [diff]

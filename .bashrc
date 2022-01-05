@@ -1,1 +1,1 @@
-source /Users/ivan/dotfiles/bash/.bashrc
+source /Users/$USER/dotfiles/bash/.bashrc
