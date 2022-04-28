@@ -17,6 +17,9 @@
     ci = commit
     st = status
     br = branch -v --sort=-committerdate
+    ch = checkout
+    re = rebase -i
+    rea = rebase -i --autosquash
     clockify = log --pretty='%C(auto) %h %Cred%ad %Cblue%an%C(auto)%d %s'
 [log]
     date = format:%a %d. %m. %Y %H:%M:%S
